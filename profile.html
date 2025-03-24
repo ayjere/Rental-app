@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Web App</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+  
+    <nav class="bg-gray-800 shadow-md px-8 py-4 text-white flex justify-between items-center">
+        <div class="text-xl font-bold">Admin Dashboard</div>
+        <ul class="flex space-x-6 hover:text-yellow-300">
+          <li><a href="dashboard.html" class="hover:text-yellow-300">Dashboard</a></li>
+          <li><a href="profile.html" class="hover:text-yellow-300">Profile Settings</a></li>
+          <li><a href="tenantsMgt.html" class="hover:text-yellow-300">Tenant Management</a></li>
+          <li><a href="landlord-management.html" class="hover:text-yellow-300">Landlord Management</a></li>
+          <li><a href="property-management.html" class="hover:text-yellow-300">Property Management</a></li>
+          <li><a href="payments.html" class="hover:text-yellow-300">Payments</a></li>
+          <li><a href="Notification.html" class="hover:text-yellow-300">Notification</a></li>
+          <li><a href="logout.html" class="hover:text-red-400">Logout</a></li>  
+        </ul>
+    </nav>
+
+<section class="p-6 bg-white rounded-lg shadow-lg mt-6">
+    <h2 class="text-2xl font-semibold mb-4">User Profile & Settings</h2>
+  
+    <!-- Profile Info -->
+    <div class="flex items-center space-x-6 mb-6">
+      <img src="https://via.placeholder.com/100" alt="User Avatar" class="w-24 h-24 rounded-full border">
+      <div>
+        <h3 class="text-xl font-bold">Admin Name</h3>
+        <p class="text-gray-600">admin@example.com</p>
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Change Profile Picture</button>
+      </div>
+    </div>
+  
+    <!-- Update Details Form -->
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-gray-700 mb-2">Full Name</label>
+        <input type="text" value="Admin Name" class="w-full p-3 border rounded">
+      </div>
+      <div>
+        <label class="block text-gray-700 mb-2">Email</label>
+        <input type="email" value="admin@example.com" class="w-full p-3 border rounded">
+      </div>
+      <div>
+        <label class="block text-gray-700 mb-2">Phone Number</label>
+        <input type="text" value="+234 812 345 6789" class="w-full p-3 border rounded">
+      </div>
+      <div>
+        <label class="block text-gray-700 mb-2">Role</label>
+        <input type="text" value="Administrator" disabled class="w-full p-3 border rounded bg-gray-100">
+      </div>
+  
+      <!-- Password Change -->
+      <div class="md:col-span-2 mt-4">
+        <label class="block text-gray-700 mb-2">Change Password</label>
+        <input type="password" placeholder="New Password" class="w-full p-3 border rounded mb-3">
+        <input type="password" placeholder="Confirm New Password" class="w-full p-3 border rounded">
+      </div>
+  
+      <div class="md:col-span-2 mt-4">
+        <button class="bg-green-600 text-white p-3 rounded hover:bg-green-700 w-full">Save Changes</button>
+      </div>
+    </form>
+  </section>
+  

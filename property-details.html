@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Web App</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+  
+<!-- Admin Navigation -->
+<nav class="bg-gray-800 shadow-md px-8 py-4 text-white flex justify-between items-center">
+  <div class="text-xl font-bold">Admin Dashboard</div>
+  <ul class="flex space-x-6 hover:text-yellow-300">
+    <li><a href="dashboard.html" class="hover:text-yellow-300">Dashboard</a></li>
+    <li><a href="profile.html" class="hover:text-yellow-300">Profile Settings</a></li>
+    <li><a href="tenantsMgt.html" class="hover:text-yellow-300">Tenant Management</a></li>
+    <li><a href="landlord-management.html" class="hover:text-yellow-300">Landlord Management</a></li>
+    <li><a href="property-management.html" class="hover:text-yellow-300">Property Management</a></li>
+    <li><a href="payments.html" class="hover:text-yellow-300">Payments</a>
+    </li>
+    <li><a href="logout.html" class="hover:text-red-400">Logout</a></li>
+    
+  </ul>
+</nav>
+
+<body class="bg-gray-100 text-center p-10">
+  <!-- Property Details Section -->
+<section class="max-w-6xl mx-auto p-6 bg-white rounded-2xl shadow-lg my-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Property Images -->
+      <div>
+        <img src="https://via.placeholder.com/600x400" alt="Property Image" class="rounded-xl w-full object-cover shadow">
+        <div class="grid grid-cols-3 gap-4 mt-4">
+          <img src="https://via.placeholder.com/150" class="rounded-lg shadow" alt="Additional Image">
+          <img src="https://via.placeholder.com/150" class="rounded-lg shadow" alt="Additional Image">
+          <img src="https://via.placeholder.com/150" class="rounded-lg shadow" alt="Additional Image">
+        </div>
+      </div>
+  
+      <!-- Property Info -->
+      <div class="flex flex-col justify-between">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">3 Bedroom Luxury Apartment</h2>
+          <p class="text-gray-700 mb-6">Located in the heart of the city with easy access to malls, schools, and hospitals. The apartment boasts spacious rooms, modern finishes, and a serene environment.</p>
+          <ul class="space-y-3">
+            <li><strong>Location:</strong> Lekki Phase 1, Lagos</li>
+            <li><strong>Price:</strong> ₦3,500,000 / Year</li>
+            <li><strong>Bedrooms:</strong> 3</li>
+            <li><strong>Bathrooms:</strong> 4</li>
+            <li><strong>Size:</strong> 280 sqm</li>
+          </ul>
+        </div>
+  
+        <!-- Action Buttons -->
+        <div class="mt-8 flex gap-4">
+          <button class="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">Book a Visit</button>
+          <button class="px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition">Contact Landlord</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section -->
+<footer class="bg-gray-900 text-gray-300 py-16 px-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+
+    <!-- Brand -->
+    <div>
+      <h2 class="text-3xl font-bold text-white mb-6">RentEase</h2>
+      <p class="text-gray-400">Connecting landlords & tenants effortlessly. Your home, one click away.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+      <ul class="space-y-3">
+        <li><a href="#" class="hover:text-white transition">Home</a></li>
+        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+        <li><a href="#" class="hover:text-white transition">Properties</a></li>
+        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-4">Resources</h3>
+      <ul class="space-y-3">
+        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-white transition">FAQs</a></li>
+        <li><a href="#" class="hover:text-white transition">Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-4">Newsletter</h3>
+      <p class="text-gray-400 mb-4">Subscribe for exclusive property updates.</p>
+      <form class="flex flex-col space-y-4">
+        <input type="email" placeholder="Enter your email" class="p-3 rounded-lg bg-gray-800 text-gray-200 focus:outline-none">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 transition p-3 rounded-lg text-white font-semibold">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="mt-16 border-t border-gray-700 pt-8 text-center text-gray-500">
+    &copy; 2025 RentEase. All rights reserved.
+  </div>
+</footer>   
+</body>
+  

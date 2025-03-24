@@ -1,13 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Web App</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-center p-10">
+  <!-- Navbar -->
+<nav class="bg-white shadow-md px-8 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold text-blue-600">Rentals</div>
+    <ul class="flex space-x-6 text-gray-700 font-medium">
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="#" class="hover:text-blue-600">Listings</a></li>
+      <li><a href="#" class="hover:text-blue-600">About</a></li>
+      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+    
+    <a href="pages/login.html">
+    
+        <button 
+        type="submit" 
+        class="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition duration-300">
+        Login
+        </button>
+    </a>
+  </nav>
+<!-- Hero Section -->
+<section class="bg-blue-600 text-white py-20 px-8 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Find Your Perfect Rental Property</h1>
+    <p class="text-lg md:text-xl mb-8">Explore the best apartments, houses, and spaces at affordable prices.</p>
+    <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Get Started</a>
+  </section>
+  <section class="bg-white py-6 px-4 shadow-md rounded-2xl mb-8 max-w-4xl mx-auto">
+    <form class="flex flex-col sm:flex-row gap-4">
+      <input 
+        type="text" 
+        placeholder="Search by location, property name, or keyword..." 
+        class="flex-1 px-6 py-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+      />
+  
+      <button 
+        type="submit" 
+        class="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition duration-300"
+      >
+        Search
+      </button>
+    </form>
+  </section>
+  
+  <section class="py-10 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-6">
+      
+      <!-- Filters -->
+      <div class="flex flex-wrap gap-4">
+        <select class="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+          <option>Property Type</option>
+          <option>Apartment</option>
+          <option>House</option>
+          <option>Villa</option>
+        </select>
+  
+        <select class="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+          <option>Price Range</option>
+          <option>$500 - $1000</option>
+          <option>$1000 - $2000</option>
+          <option>$2000+</option>
+        </select>
+  
+        <select class="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+          <option>Bedrooms</option>
+          <option>1 Bedroom</option>
+          <option>2 Bedrooms</option>
+          <option>3+ Bedrooms</option>
+        </select>
+      </div>
+  
+      <!-- Sorting -->
+      <div class="flex gap-4 items-center">
+        <span class="text-gray-700 font-medium">Sort by:</span>
+        <select class="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+          <option>Newest</option>
+          <option>Price (Low to High)</option>
+          <option>Price (High to Low)</option>
+        </select>
+      </div>
+  
+    </div>
+  </section>
+  
+<!-- Property Listings Section -->
+<section class="py-16 px-8 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-12">Featured Listings</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  
+      <!-- Property Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="https://source.unsplash.com/400x250/?house" alt="House 1" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Luxury Apartment</h3>
+          <p class="text-gray-600 mb-4">2 Bed, 2 Parlor</p>
+          <span class="text-blue-600 font-bold">120,000/month</span>
+            <p>
+                <a href="pages/property-details.html" class= "text-blue-600 hover:underline bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">View Details</a>
+            </p>
+           
+        </div>
+      </div>
+  
+      <!-- Property Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="https://source.unsplash.com/400x250/?apartment" alt="Apartment 2" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Self Contain</h3>
+          <p class="text-gray-600 mb-4">Kitchen, Toilet and Bedroom</p>
+          <span class="text-blue-600 font-bold">85,000/month</span>
+        <p>
+            <a href="pages/property-details.html" class= "text-blue-600 hover:underline bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">View Details</a>
+        </p>
+        </div>
+      </div>
+  
+      <!-- Property Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="https://source.unsplash.com/400x250/?villa" alt="Villa 3" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Family 3 bedroom</h3>
+          <p class="text-gray-600 mb-4">4 Bed, 3 Bath with a garden</p>
+          <span class="text-blue-600 font-bold">N200,000/month</span>
+        <p>
+            <a href="pages/property-details.html" class= "text-blue-600 hover:underline bg-white rounded-2x1 shadow-md overflow-hidden hover:shadow-lg transition">View Details</a>
+        </p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+ 
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-gray-300 py-16 px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+  
+      <!-- Brand -->
+      <div>
+        <h2 class="text-3xl font-bold text-white mb-6">RentEase</h2>
+        <p class="text-gray-400">Connecting landlords & tenants effortlessly. Your home, one click away.</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-white transition">Home</a></li>
+          <li><a href="#" class="hover:text-white transition">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition">Properties</a></li>
+          <li><a href="#" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Resources -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4">Resources</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition">FAQs</a></li>
+          <li><a href="#" class="hover:text-white transition">Support</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4">Newsletter</h3>
+        <p class="text-gray-400 mb-4">Subscribe for exclusive property updates.</p>
+        <form class="flex flex-col space-y-4">
+          <input type="email" placeholder="Enter your email" class="p-3 rounded-lg bg-gray-800 text-gray-200 focus:outline-none">
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 transition p-3 rounded-lg text-white font-semibold">Subscribe</button>
+        </form>
+      </div>
+  
+    </div>
+  
+    <!-- Bottom Footer -->
+    <div class="mt-16 border-t border-gray-700 pt-8 text-center text-gray-500">
+      &copy; 2025 RentEase. All rights reserved.
+    </div>
+  </footer>   
+  <script type="module" src="/src/main.jsx">
+
+  </script>
+</body>
 </html>

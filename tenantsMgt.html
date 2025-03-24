@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenant Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+    
+    <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-4">Tenant Management</h2>
+        <!-- Admin Navigation -->
+
+        <nav class="bg-gray-800 shadow-md px-8 py-4 text-white flex justify-between items-center">
+            <div class="text-xl font-bold">Admin Dashboard</div>
+            <ul class="flex space-x-6 hover:text-yellow-300">
+              <li><a href="dashboard.html" class="hover:text-yellow-300">Dashboard</a></li>
+              <li><a href="profile.html" class="hover:text-yellow-300">Profile Settings</a></li>
+              <li><a href="tenantsMgt.html" class="hover:text-yellow-300">Tenant Management</a></li>
+              <li><a href="landlord-management.html" class="hover:text-yellow-300">Landlord Management</a></li>
+              <li><a href="property-management.html" class="hover:text-yellow-300">Property Management</a></li>
+              <li><a href="payments.html" class="hover:text-yellow-300">Payments</a>
+              </li>
+              <li><a href="logout.html" class="hover:text-red-400">Logout</a></li>
+              
+            </ul>
+        </nav>
+        
+        <!-- Add Tenant Form -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2">Add New Tenant</h3>
+            <form id="addTenantForm" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <input type="text" placeholder="Full Name" required class="border p-2 rounded">
+                <input type="email" placeholder="Email" required class="border p-2 rounded">
+                <input type="text" placeholder="Phone Number" required class="border p-2 rounded">
+                <input type="text" placeholder="Apartment/Unit" required class="border p-2 rounded">
+                <select class="border p-2 rounded">
+                    <option>Lease Status</option>
+                    <option>Active</option>
+                    <option>Expired</option>
+                </select>
+                <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Add Tenant</button>
+            </form>
+        </div>
+        
+        <!-- Tenant List -->
+        <h3 class="text-lg font-semibold mb-2">Current Tenants</h3>
+        <table class="w-full border-collapse bg-white shadow-md">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="p-2">Name</th>
+                    <th class="p-2">Email</th>
+                    <th class="p-2">Phone</th>
+                    <th class="p-2">Apartment</th>
+                    <th class="p-2">Lease Status</th>
+                    <th class="p-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tenantList">
+                <!-- Tenants will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        document.getElementById('addTenantForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let formData = new FormData(event.target);
+            let tenantRow = `<tr class='border-b'>
+                <td class='p-2'>${formData.get("Full Name")}</td>
+                <td class='p-2'>${formData.get("Email")}</td>
+                <td class='p-2'>${formData.get("Phone Number")}</td>
+                <td class='p-2'>${formData.get("Apartment/Unit")}</td>
+                <td class='p-2'>${formData.get("Lease Status")}</td>
+                <td class='p-2'>
+                    <button class='text-blue-600'>Edit</button>
+                    <button class='text-red-600 ml-2' onclick='this.parentElement.parentElement.remove()'>Delete</button>
+                </td>
+            </tr>`;
+            
+            document.getElementById('tenantList').innerHTML += tenantRow;
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>

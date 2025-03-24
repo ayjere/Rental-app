@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Web App</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+  
+<!-- Admin Navigation -->
+<nav class="bg-gray-800 shadow-md px-8 py-4 text-white flex justify-between items-center">
+  <div class="text-xl font-bold">Admin Dashboard</div>
+  <ul class="flex space-x-6 hover:text-yellow-300">
+    <li><a href="dashboard.html" class="hover:text-yellow-300">Dashboard</a></li>
+    <li><a href="profile.html" class="hover:text-yellow-300">Profile Settings</a></li>
+    <li><a href="tenantsMgt.html" class="hover:text-yellow-300">Tenant Management</a></li>
+    <li><a href="landlord-management.html" class="hover:text-yellow-300">Landlord Management</a></li>
+    <li><a href="property-management.html" class="hover:text-yellow-300">Property Management</a></li>
+    <li><a href="payments.html" class="hover:text-yellow-300">Payments</a>
+    </li>
+    <li><a href="logout.html" class="hover:text-red-400">Logout</a></li>
+    
+  </ul>
+</nav>
+
+
+<section class="p-6 bg-white rounded-lg shadow-lg mt-6">
+    <h2 class="text-2xl font-semibold mb-4">Landlord Management</h2>
+  
+    <!-- Add New Landlord -->
+    <form class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" placeholder="Full Name" class="p-3 border rounded" required>
+      <input type="email" placeholder="Email Address" class="p-3 border rounded" required>
+      <input type="text" placeholder="Phone Number" class="p-3 border rounded">
+      <input type="text" placeholder="Assigned Properties" class="p-3 border rounded">
+      <button class="col-span-1 md:col-span-2 bg-blue-600 text-white p-3 rounded hover:bg-blue-700">Add Landlord</button>
+    </form>
+  
+    <!-- Landlord List -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="p-3">Name</th>
+            <th class="p-3">Email</th>
+            <th class="p-3">Phone</th>
+            <th class="p-3">Properties</th>
+            <th class="p-3">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t">
+            <td class="p-3">John Doe</td>
+            <td class="p-3">john@example.com</td>
+            <td class="p-3">+234 812 345 6789</td>
+            <td class="p-3">5</td>
+            <td class="p-3">
+              <button class="bg-yellow-400 text-white px-3 py-1 rounded hover:bg-yellow-500">Edit</button>
+              <button class="bg-red-6
+  

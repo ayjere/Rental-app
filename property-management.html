@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Web App</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+  
+    <nav class="bg-gray-800 shadow-md px-8 py-4 text-white flex justify-between items-center">
+        <div class="text-xl font-bold">Admin Dashboard</div>
+        <ul class="flex space-x-6 hover:text-yellow-300">
+          <li><a href="dashboard.html" class="hover:text-yellow-300">Dashboard</a></li>
+          <li><a href="profile.html" class="hover:text-yellow-300">Profile Settings</a></li>
+          <li><a href="tenantsMgt.html" class="hover:text-yellow-300">Tenant Management</a></li>
+          <li><a href="landlord-management.html" class="hover:text-yellow-300">Landlord Management</a></li>
+          <li><a href="property-management.html" class="hover:text-yellow-300">Property Management</a></li>
+          <li><a href="payments.html" class="hover:text-yellow-300">Payments</a>
+          </li>
+          <li><a href="logout.html" class="hover:text-red-400">Logout</a></li>
+          
+        </ul>
+    </nav>
+
+<section class="p-6 bg-white rounded-lg shadow-lg mt-6">
+    <h2 class="text-2xl font-semibold mb-4">Property Management</h2>
+  
+    <!-- Add New Property -->
+    <form class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" placeholder="Property Name" class="p-3 border rounded" required>
+      <input type="text" placeholder="Location" class="p-3 border rounded" required>
+      <input type="text" placeholder="Type (Apartment, Duplex, etc.)" class="p-3 border rounded" required>
+      <input type="number" placeholder="Number of Units" class="p-3 border rounded" required>
+      <input type="number" placeholder="Price per Unit" class="p-3 border rounded" required>
+      <input type="text" placeholder="Assigned Landlord" class="p-3 border rounded" required>
+      <button class="col-span-1 md:col-span-2 bg-green-600 text-white p-3 rounded hover:bg-green-700">Add Property</button>
+    </form>
+  
+    <!-- Property List -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="p-3">Property Name</th>
+            <th class="p-3">Location</th>
+            <th class="p-3">Type</th>
+            <th class="p-3">Units</th>
+            <th class="p-3">Price (₦)</th>
+            <th class="p-3">Landlord</th>
+            <th class="p-3">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t">
+            <td class="p-3">Ocean View Estate</td>
+            <td class="p-3">Abuja</td>
+            <td class="p-3">Apartment</td>
+            <td class="p-3">12</td>
+            <td class="p-3">500,000</td>
+            <td class="p-3">John Doe</td>
+            <td class="p-3">
+              <button class="bg-yellow-400 text-white px-3 py-1 rounded hover:bg-yellow-500">Edit</button>
+              <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 ml-2">Remove</button>
+            </td>
+          </tr>
+          <!-- More properties -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
